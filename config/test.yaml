@@ -1,0 +1,41 @@
+exp_name: training
+
+model: FESTA
+dataset: flythings3d
+dataset_path: ./data_processed_maxcut_35_20k_2k_8192 # put the path of your dataset here
+model_path: ''
+
+# -------------------------model hyper parameters-----------------------
+emb_dims: 512
+num_points: 2048
+dropout: 0.5
+batch_size: 32
+test_batch_size: 64
+epochs: 500
+use_sgd: False
+lr: 0.001
+momentum: 0.9
+decay_steps: 200000
+decay_rate: 0.7
+no_cuda: False
+seed: 1234
+
+# -------------------------network structure-----------------------------
+rgb: True
+mask: True
+recurrent: True
+one_loss: False
+
+# -------------------------network training-----------------------------
+
+gaussian_noise: False
+unseen: False
+cycle: False
+pretrain: False
+pretrain_name: festa
+resume: False
+train_pcl_write: False
+bn: True
+
+# -------------------------network testing-----------------------------
+eval: True

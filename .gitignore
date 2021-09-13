@@ -1,0 +1,8 @@
+__pycache__/
+checkpoints/
+build/
+dist/
+pointnet2.egg-info/
+experiment/
+images/
+visualization/
